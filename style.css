@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* حاوية المحتوى */
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* عنوان رئيسي */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ffffff80, 0 0 25px #00bfff;
+    letter-spacing: 2px;
+}
+
+/* زر */
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #00bfff, #8a2be2);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00bfff80;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00bfff;
+}
+
+/* نجوم متحركة */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 
+        50px 100px white,
+        150px 200px white,
+        250px 300px white,
+        350px 50px white,
+        450px 150px white,
+        550px 250px white,
+        650px 350px white,
+        750px 100px white;
+    animation: stars 10s linear infinite;
+}
+
+body::after {
+    transform: scale(1.5);
+    opacity: 0.6;
+    animation-duration: 15s;
+}
+
+@keyframes stars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* تأثير دخول */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* استايلات سابقة موجودة... */
+
+/* رأس الصفحة الثانية */
+.page-header {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #00bfff;
+    font-weight: bold;
+    background: #ffffff10;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #00bfff40;
+}
+
+/* بطاقات المعلومات */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.info-card {
+    background: #ffffff10;
+    padding: 20px;
+    border-radius: 20px;                                                                    
+    box-shadow: 0 0 20px #00000080;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #00bfff80;
+}
+
+.info-card h2 {
+    margin-bottom: 10px;
+    color: #00bfff;
+}
+
+.info-card p {
+    color: #ddd;
+    line-height: 1.5;
+}
+ /* صفحة التفاصيل */
+.detail-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.detail-container img {
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px #00bfff80;
+}
+
+.detail-container p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+.venous{
+    width: 350px;
+}
+.mercuri{
+    width: 200px;
+}
+.earth{
+    width: 200px;
+
+}
+.mars{
+    width: 200px;
+
+}
